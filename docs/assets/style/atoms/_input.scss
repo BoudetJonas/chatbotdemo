@@ -1,0 +1,9 @@
+.input-text {
+  display: flex;
+  justify-content: space-between;
+
+  > input {
+    width: 100%;
+    padding: 10px;
+  }
+}
