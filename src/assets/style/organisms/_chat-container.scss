@@ -1,0 +1,12 @@
+.chat-container {
+  width: 100%;
+  border: 1px solid black;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.fontSizeSmall {
+  font-size: 30px;
+}

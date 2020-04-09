@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/style/variables';
+
+@import'./assets/style/atoms/button';
+@import'./assets/style/atoms/heeader';
+@import'./assets/style/atoms/input';
+
+@import'./assets/style/molecules/chat';
+
+@import'./assets/style/organisms/chat-container';
