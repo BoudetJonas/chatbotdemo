@@ -3,14 +3,16 @@ import {CommonModule} from '@angular/common';
 import {ChatDialogComponent} from './chat-dialog/chat-dialog.component';
 import {ChatService} from './chat.service';
 import {FormsModule} from '@angular/forms';
+import {NgxAutoScrollModule} from 'ngx-auto-scroll';
 
 
 @NgModule({
   declarations: [ChatDialogComponent],
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        NgxAutoScrollModule
+    ],
   exports: [
     ChatDialogComponent
   ],
