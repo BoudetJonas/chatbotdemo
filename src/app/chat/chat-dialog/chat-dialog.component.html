@@ -1,8 +1,11 @@
 <div class="chat-container" [class.fontSizeSmall]="fontSizeBig">
+  <div class="header">
+    TOTO
+  </div>
   <div class="chat">
     <ng-container  class="chat" *ngFor="let message of messages | async">
 
-      <div class="message" [ngClass]="{'bot': message.sentBy === 'bot',
+      <div  class="message" [ngClass]="{'bot': message.sentBy === 'bot',
                       'user': message.sentBy === 'user'}">
 
         {{message.content}}
@@ -10,10 +13,9 @@
 
     </ng-container>
   </div>
-  <div class="input-text">
+  <footer class="block-input">
     <button class="button-font" [class.fontSizeSmall] (click)="changeFontSize()">+ grand</button>
     <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" placeholder="taper votre message ici">
     <button class="button" (click)="sendMessage()">Envoyer</button>
-  </div>
-
+  </footer>
 </div>
