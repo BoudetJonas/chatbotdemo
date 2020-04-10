@@ -18,6 +18,7 @@ export class ChatService {
   readonly client = new ApiAiClient({accessToken: this.token});
 
   conservation = new BehaviorSubject<Message[]>([]);
+  loading = false;
 
   constructor() {
   }
@@ -36,7 +37,11 @@ export class ChatService {
       .then(res => {
         const speech = res.result.fulfillment.speech;
         const botMessage = new Message(speech, 'bot');
-        this.update(botMessage);
+        setTimeout(() => {
+          this.loading = true;
+          this.update(botMessage);
+        }, 3000);
+        this.loading = false;
       });
   }
 }
