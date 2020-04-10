@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ChatService, Message} from '../chat.service';
 import {Observable} from 'rxjs';
 import {scan} from 'rxjs/operators';

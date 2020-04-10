@@ -2,7 +2,7 @@
   <div class="header">
     TOTO
   </div>
-  <div class="chat">
+  <div class="chat" ngx-auto-scroll lock-y-offset="10" observe-attributes>
     <ng-container  class="chat" *ngFor="let message of messages | async">
 
       <div  class="message" [ngClass]="{'bot': message.sentBy === 'bot',
